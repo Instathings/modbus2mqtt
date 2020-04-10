@@ -2,6 +2,10 @@ const mqtt = require('mqtt');
 
 async function test() {
   const client = await mqtt.connect('mqtt://localhost');
+  await client.subscribe('modbus2mqtt/bridge/log');
+  client.on('message', (topic, message) => {
+    console.log(topic, message.toString());
+  })
   console.log('connected');
   const payload = {
     id: 'xfwog',
