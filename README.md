@@ -4,7 +4,7 @@
 
 ### Add a new Modbus device
 
-#### modbus2mqtt/configure/set
+#### modbus2mqtt/configure/set
 
 Payload:
 - id: a unique string for you
@@ -25,7 +25,7 @@ Payload:
 
 ### Remove a Modbus device
 
-#### modbus2mqtt/configure/unset
+#### modbus2mqtt/configure/unset
 
 Payload:
 - id: the id of the device to remove
@@ -38,7 +38,7 @@ Payload:
 
 ### Read data of a device
 
-#### modbus2mqtt/:id
+#### modbus2mqtt/:id
 
 You can subscribe to this topic in order to receive data from the device.
 
