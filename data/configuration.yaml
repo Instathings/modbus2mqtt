@@ -6,3 +6,9 @@ modbus:
   baud_rate: 9600
 advanced:
   log_output: debug
+devices:
+  xfwog:
+    friendly_name: 1
+    baud_rate: 9600
+    interval: 10000
+    model: xy-md02
