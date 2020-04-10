@@ -25,7 +25,7 @@ Payload:
 
 ### Remove a Modbus device
 
-#### modbus2mqtt/configure/unset
+#### modbus2mqtt/bridge/config/force_remove
 
 Payload:
 - id: the id of the device to remove
