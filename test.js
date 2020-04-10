@@ -12,11 +12,6 @@ async function test() {
   };
   await client.publish('modbus2mqtt/configure/set', JSON.stringify(payload));
   console.log('PUBLISHED');
-  // const payload = {
-  //   id: 'xfwog',
-  // };
-  // await client.publish('modbus2mqtt/configure/unset', JSON.stringify(payload));
-  // console.log('published');
 }
 
 test();

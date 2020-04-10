@@ -5,7 +5,8 @@ modbus:
   port: /dev/tty.SLAB_USBtoUART
   baud_rate: 9600
 advanced:
-  log_output: debug
+  log_output:
+    - console
 devices:
   xfwog:
     modbus_id: 1
