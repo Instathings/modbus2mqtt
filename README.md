@@ -63,8 +63,22 @@ You can subscribe to this topic in order to receive data from the device.
 ### modbus2mqtt/bridge/log
 
 In this topic are sent:
-- ack of a new connected device `{type: 'device_connected', friendly_name: 'uniqueStringId'}`
-- ack of a force removed device `{type: 'device_force_removed', friendly_name: 'uniqueStringId'}`
+- ack of a new connected device 
+```
+{
+  type: 'device_connected', 
+  message: {
+    friendly_name: 'uniqueStringId'
+  }
+}
+```
+- ack of a force removed device 
+```
+{ 
+  type: 'device_force_removed', 
+  message: 'uniqueStringId'
+}
+```
 
 ### Acknowledgments
 
