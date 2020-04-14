@@ -102,3 +102,4 @@ knownDevices.config
 
 sslCert/
 .DS_Store
+data/
