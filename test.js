@@ -10,17 +10,12 @@ async function test() {
   // const payload = {
   //   id: 'xfwog',
   //   modbus_id: 1,
-  //   baud_rate: 9600,
-  //   interval: 10000,
   //   model: 'xy-md02',
   // };
   // await client.publish('modbus2mqtt/configure/set', JSON.stringify(payload));
   // console.log('PUBLISHED');
-  // const payload = {
-  //   id: 'xfwog',
-  // };
-  const id = 'xfwog';
-  await client.publish('modbus2mqtt/bridge/config/force_remove', id);
+  // const id = 'xfwog';
+  // await client.publish('modbus2mqtt/bridge/config/force_remove', id);
 }
 
 test();
