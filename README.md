@@ -1,5 +1,25 @@
 # modbus2mqtt - software layer to abstract modbus protocol
 
+## Configuration
+
+To start the modbus2mqtt service you will need a `configuration.yaml` in the `data` folder.
+
+### configuration.yaml
+
+Minimal configuration looks like this:
+
+```
+mqtt:
+  base_topic: modbus2mqtt
+  server: 'mqtt://localhost'
+modbus:
+  port: /dev/tty.SLAB_USBtoUART
+  baud_rate: 9600
+advanced:
+  log_output:
+    - console
+```
+
 ## Topics
 
 ### Add a new Modbus device
