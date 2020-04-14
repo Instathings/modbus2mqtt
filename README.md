@@ -50,11 +50,7 @@ Payload:
 Payload:
 - id: the id of the device to remove
 
-```
-{
-    id: 'uniqueStringId',
-}
-```
+This payload must be sent as a string not as a JSON object.
 
 ### Read data of a device
 
@@ -67,7 +63,8 @@ You can subscribe to this topic in order to receive data from the device.
 ### modbus2mqtt/bridge/log
 
 In this topic are sent:
-- ack of connected devices `{type: 'device_connected', friendly_name: 'uniqueStringId'}`
+- ack of a new connected device `{type: 'device_connected', friendly_name: 'uniqueStringId'}`
+- ack of a force removed device `{type: 'device_force_removed', friendly_name: 'uniqueStringId'}`
 
 ### Acknowledgments
 
