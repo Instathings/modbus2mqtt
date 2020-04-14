@@ -44,7 +44,7 @@ You can subscribe to this topic in order to receive data from the device.
 
 ### Log
 
-### modbus2mqtt/bridge/log
+### modbus2mqtt/bridge/log
 
 In this topic are sent:
 - ack of connected devices `{type: 'device_connected', friendly_name: 'uniqueStringId'}`
