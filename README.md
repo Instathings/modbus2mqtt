@@ -14,7 +14,6 @@ mqtt:
   server: 'mqtt://localhost'
 modbus:
   port: /dev/tty.SLAB_USBtoUART
-  baud_rate: 9600
 advanced:
   log_output:
     - console
