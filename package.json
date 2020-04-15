@@ -1,5 +1,5 @@
 {
-  "name": "modbus2mqtt",
+  "name": "@instathings/modbus2mqtt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
