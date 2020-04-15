@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json .
 
 RUN apt-get update
-RUN apt-get install make gcc g++ git
+RUN apt-get install git
 RUN npm i
 
 COPY lib ./lib

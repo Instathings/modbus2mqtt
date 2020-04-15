@@ -17,6 +17,9 @@ jobs:
         uses: actions/checkout@v1
       -
         name: run
+        run: pwd 
+      -
+        name: run
         run: npm i
       -
         name: run
@@ -34,7 +37,7 @@ jobs:
         name: set up image tag
         run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\/v/}
       -
-        name: echo tag
+        name: echo branch
         run: echo ${{env.TAG}}
       -
         name: Run Buildx
