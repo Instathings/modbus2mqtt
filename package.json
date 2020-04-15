@@ -1,7 +1,7 @@
 {
   "name": "@instathings/modbus2mqtt",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modbus2MQTT bridge",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js index",
