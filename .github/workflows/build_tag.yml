@@ -17,9 +17,6 @@ jobs:
         uses: actions/checkout@v1
       -
         name: run
-        run: pwd 
-      -
-        name: run
         run: npm i
       -
         name: run
@@ -36,12 +33,6 @@ jobs:
       -
         name: set up image tag
         run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\/v/}
-      -
-        name: set up image tag
-        run: sed -i "s/RUN git checkout development/#/g" Dockerfile
-      -
-        name: cat
-        run: cat Dockerfile
       -
         name: echo tag
         run: echo ${{env.TAG}}
