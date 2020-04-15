@@ -1,0 +1,51 @@
+name: buildx
+
+on:
+  push:
+    tags: 
+      - '*'
+
+jobs:
+  buildx:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Docker login
+        run: echo '${{ secrets.DOCKERHUB_PASS }}' | docker login --username userbuilder --password-stdin
+      -
+        name: Checkout
+        uses: actions/checkout@v1
+      -
+        name: run
+        run: pwd 
+      -
+        name: run
+        run: npm i
+      -
+        name: run
+        run: ls -la 
+      -
+        name: Set up Docker Buildx
+        id: buildx
+        uses: crazy-max/ghaction-docker-buildx@v1
+        with:
+          version: latest
+      -
+        name: Available platforms
+        run: echo ${{ steps.buildx.outputs.platforms }}
+      -
+        name: set up image tag
+        run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\/v/}
+      -
+        name: set up image tag
+        run: sed -i "s/RUN git checkout development/#/g" Dockerfile
+      -
+        name: cat
+        run: cat Dockerfile
+      -
+        name: echo tag
+        run: echo ${{env.TAG}}
+      -
+        name: Run Buildx
+        run: |
+          docker buildx build --build-arg COMMIT=$(git rev-parse --short HEAD) --platform linux/arm/v7,linux/arm64,linux/amd64 -t instathings/modbus2mqtt:${{env.TAG}} --file ./Dockerfile --no-cache --push ./

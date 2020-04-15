@@ -1,0 +1,37 @@
+{
+  "name": "modbus2mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^10 || ^12 || ^13"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@instathings/modbus-herdsman-converters": "^2.0.0",
+    "fast-deep-equal": "^3.1.1",
+    "git-last-commit": "^1.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "mkdir-recursive": "^0.4.0",
+    "modbus-serial": "^7.8.1",
+    "moment": "^2.24.0",
+    "mqtt": "^3.0.0",
+    "object-assign-deep": "^0.4.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.2.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.3"
+  }
+}
