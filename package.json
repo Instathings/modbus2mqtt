@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@instathings/modbus-herdsman-converters": "^2.0.0",
+    "@instathings/modbus-herdsman-converters": "2.0.2",
     "fast-deep-equal": "^3.1.1",
     "git-last-commit": "^1.0.0",
     "js-yaml": "^3.13.1",
