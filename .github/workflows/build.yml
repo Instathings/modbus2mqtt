@@ -24,6 +24,9 @@ jobs:
         run: npm i
       -
         name: run
+        run: npm test
+      -
+        name: run
         run: ls -la 
       -
         name: Set up Docker Buildx
