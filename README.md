@@ -82,6 +82,8 @@ In this topic are sent:
 
 ### Acknowledgments
 
+This work relies on the awesome [modbus-serial](https://github.com/yaacov/node-modbus-serial) library.
+
 This work is inspired from the awesome work of [Zigbee2MQTT](https://github.com/Koenkk/zigbee2mqtt).
 
 ### License
