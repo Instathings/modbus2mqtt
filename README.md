@@ -86,6 +86,11 @@ This work relies on the awesome [modbus-serial](https://github.com/yaacov/node-m
 
 This work is inspired from the awesome work of [Zigbee2MQTT](https://github.com/Koenkk/zigbee2mqtt).
 
+
+## Discussion
+
+* Discuss Modbus2MQTT on our [forum](https://forum.instathings.io/)
+
 ### License
 modbus2mqtt is [fair-code](https://faircode.io/) licensed under [**Apache 2.0 with Commons Clause**](https://github.com/Instathings/modbus2mqtt/blob/master/LICENSE.md)
 
