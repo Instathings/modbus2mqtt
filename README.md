@@ -15,10 +15,32 @@ mqtt:
 modbus:
   port: /dev/tty.SLAB_USBtoUART
   baud_rate: 9600
+  parity: 'none'
+  data_bits: 8
+  stop_bits: 1
 advanced:
   log_output:
     - console
+devices:
+  device1:
+    modbus_id: 1
+    model: xy-md02
 ```
+Note: devices can be added via mqtt as well, see below.
+
+## Running
+
+Start with:
+```
+npm start
+```
+
+Enable debug logging with:
+```
+DEBUG=1 npm start
+```
+
+(recommended the first time to see whats going on)
 
 ## Topics
 
@@ -29,15 +51,13 @@ advanced:
 Payload:
 - id: a unique string for you
 - modbus_id: the id of your Modbus device
-- baud_rate: the baud rate of your device
 - interval: in ms the polling period
 - model: the model of your device as described in `modbus-herdsman-converters`
 
 ```
 {
-    id: 'uniqueStringId',
+    id: 'device1',
     modbus_id: 1,
-    baud_rate: 9600,
     interval: 10000,
     model: 'xy-md02',
 }
@@ -68,7 +88,7 @@ In this topic are sent:
 {
   type: 'device_connected', 
   message: {
-    friendly_name: 'uniqueStringId'
+    friendly_name: 'device1'
   }
 }
 ```
@@ -76,7 +96,7 @@ In this topic are sent:
 ```
 { 
   type: 'device_force_removed', 
-  message: 'uniqueStringId'
+  message: 'device1'
 }
 ```
 

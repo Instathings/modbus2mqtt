@@ -8,7 +8,7 @@
     "test": "INTERVAL=1 ./node_modules/mocha/bin/mocha"
   },
   "engines": {
-    "node": "^10 || ^12 || ^13"
+    "node": "^10 || ^12 || ^13 || ^14"
   },
   "keywords": [],
   "author": "",
