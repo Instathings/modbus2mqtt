@@ -15,6 +15,9 @@ mqtt:
 modbus:
   port: /dev/tty.SLAB_USBtoUART
   baud_rate: 9600
+  parity: 'none'
+  data_bits: 8
+  stop_bits: 1
 advanced:
   log_output:
     - console
