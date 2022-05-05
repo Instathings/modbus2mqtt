@@ -38,12 +38,6 @@ jobs:
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
-        name: set up image tag
-        run: echo ::set-env name=TAG::staging
-      -
-        name: echo branch
-        run: echo ${{env.TAG}}
-      -
         env:
           TAG: staging
         name: Run Buildx
