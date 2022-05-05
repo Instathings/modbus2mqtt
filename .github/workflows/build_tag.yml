@@ -34,9 +34,6 @@ jobs:
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
-        name: set up image tag
-        run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\/v/}
-      -
         name: echo branch
         run: echo ${{env.TAG}}
       -
