@@ -1,6 +1,6 @@
 {
   "name": "@instathings/modbus2mqtt",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Modbus2MQTT bridge",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@instathings/modbus-herdsman-converters": "2.0.4",
+    "@instathings/modbus-herdsman-converters": "2.0.5",
     "fast-deep-equal": "^3.1.1",
     "git-last-commit": "^1.0.0",
     "js-yaml": "^3.13.1",
