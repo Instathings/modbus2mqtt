@@ -38,12 +38,8 @@ jobs:
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
-        name: set up image tag
-        run: echo ::set-env name=TAG::staging
-      -
-        name: echo branch
-        run: echo ${{env.TAG}}
-      -
+        env:
+          TAG: staging
         name: Run Buildx
         run: |
-          docker buildx build --build-arg COMMIT=$(git rev-parse --short HEAD) --platform linux/s390x,linux/arm/v7,linux/arm64 -t instathings/modbus2mqtt:${{env.TAG}} --file ./docker/Dockerfile --no-cache --push ./
+          docker buildx build --build-arg COMMIT=$(git rev-parse --short HEAD) --platform linux/s390x,linux/arm/v7,linux/arm64,linux/amd64 -t instathings/modbus2mqtt:${{env.TAG}} --file ./docker/Dockerfile --no-cache --push ./

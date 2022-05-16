@@ -34,12 +34,7 @@ jobs:
         name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
-        name: set up image tag
-        run: echo ::set-env name=TAG::${GITHUB_REF/refs\/tags\/v/}
-      -
-        name: echo branch
-        run: echo ${{env.TAG}}
-      -
         name: Run Buildx
         run: |
-          docker buildx build --build-arg COMMIT=$(git rev-parse --short HEAD) --platform linux/s390x,linux/arm/v7,linux/arm64 -t instathings/modbus2mqtt:${{env.TAG}} --file ./docker/Dockerfile --no-cache --push ./
+          TAG=${GITHUB_REF/refs\/tags\/v/}
+          docker buildx build --build-arg COMMIT=$(git rev-parse --short HEAD) --platform linux/s390x,linux/arm/v7,linux/arm64,linux/amd64 -t instathings/modbus2mqtt:${TAG} --file ./docker/Dockerfile --no-cache --push ./
