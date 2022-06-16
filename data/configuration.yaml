@@ -2,9 +2,41 @@ mqtt:
   base_topic: modbus2mqtt
   server: 'mqtt://localhost'
 modbus:
-  port: /dev/tty.SLAB_USBtoUART
-  baud_rate: 9600
+  port: /dev/ttyUSB0
+  timeout: 1000
+  serial:
+    baudRate: 9600
+    dataBits: 8
+    parity: 'even'
+    stopBits: 1
 advanced:
   log_output:
     - console
-devices: {}
+devices:
+  meter1:
+    modbus_id: 15
+    interval: 1000
+    model: PMC340
+drivers:
+  - model: PMC340
+    vendor: CET Inc.
+    description: Energy meter
+    supports: voltage, current, power, PF, VAR
+    fromModbus:
+      keep:
+        Uan:
+          address: 0
+          length: 2
+          type: float
+        Ubn:
+          address: 2
+          length: 2
+          type: float
+        Ucn:
+          address: 4
+          length: 2
+          type: float
+        Frequency:
+          address: 56
+          length: 2
+          type: float
