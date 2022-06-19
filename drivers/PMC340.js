@@ -3,6 +3,7 @@ module.exports = {
   vendor: 'CET Inc.',
   description: 'Energy meter',
   supports: 'voltage, current, power, pf, var',
+  endian: 'big', // 'big' - ABCD or 'little' - DCBA
   fromModbus: {
     keep: {
       Uan: {
@@ -139,12 +140,35 @@ module.exports = {
         address: 54,
         length: 2,
         type: 'float'
-      }
-      ,
+      },
       Frequency: {
         address: 56,
         length: 2,
         type: 'float'
+      },
+      kWhImport: {
+        address: 500,
+        length: 2,
+        factor: 0.01,
+        type: 'int32'
+      },
+      kWhExport: {
+        address: 502,
+        length: 2,
+        factor: 0.01,
+        type: 'int32'
+      },
+      kWhNet: {
+        address: 504,
+        length: 2,
+        factor: 0.01,
+        type: 'int32'
+      },
+      kWhTotal: {
+        address: 506,
+        length: 2,
+        factor: 0.01,
+        type: 'int32'
       }
     }
   },
