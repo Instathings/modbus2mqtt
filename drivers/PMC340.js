@@ -91,7 +91,7 @@ module.exports = {
         length: 2,
         type: 'float'
       },
-      kVARb: {
+      kVARc: {
         address: 36,
         length: 2,
         type: 'float'
