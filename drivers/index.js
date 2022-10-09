@@ -1,5 +1,5 @@
 const PMC340 = require("./PMC340");
 
-module.exports = {
+module.exports = [
   PMC340
-}
+];
