@@ -14,8 +14,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3      
         with:
-          node-version: 12
-          cache: 'npm'        
+          node-version: 12        
       - name: Docker login
         run: echo '${{ secrets.DOCKERHUB_PASS }}' | docker login --username userbuilder --password-stdin
       - name: Checkout
