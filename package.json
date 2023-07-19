@@ -19,7 +19,7 @@
     "git-last-commit": "^1.0.1",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.21",
-    "modbus-serial": "^7.8.1",
+    "modbus-serial": "^8.0.11",
     "moment": "^2.24.0",
     "mqtt": "^3.0.0",
     "mkdir-recursive": "^0.4.0",
