@@ -1,10 +1,7 @@
-FROM node:12.16.2
+FROM node:18.16.1
 
 WORKDIR /app
 COPY package.json .
-
-RUN sed -i s/security.debian.org/archive.debian.org/g /etc/apt/sources.list
-RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get install git
