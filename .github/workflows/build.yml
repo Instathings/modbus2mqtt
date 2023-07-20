@@ -4,17 +4,12 @@ on:
   push:
     branches:
       - development
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 jobs:
   buildx:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/setup-node@v3      
-        with:
-          node-version: 12        
+    steps:        
       - name: Docker login
         run: echo '${{ secrets.DOCKERHUB_PASS }}' | docker login --username userbuilder --password-stdin
       - name: Checkout
@@ -29,7 +24,7 @@ jobs:
         run: ls -la
       - name: Set up Docker Buildx
         id: buildx
-        uses: crazy-max/ghaction-docker-buildx@v1
+        uses: crazy-max/ghaction-docker-buildx@v3.3.1
         with:
           version: latest
       - name: Available platforms

@@ -1,14 +1,14 @@
 {
   "name": "@instathings/modbus2mqtt",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "Modbus2MQTT bridge",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js index",
-    "test": "INTERVAL=1 ./node_modules/mocha/bin/mocha"
+    "test": "INTERVAL=1 ./node_modules/mocha/bin/_mocha"
   },
   "engines": {
-    "node": "^10 || ^12 || ^13"
+    "node": "^18 || ^20"
   },
   "keywords": [],
   "author": "",
@@ -16,24 +16,24 @@
   "dependencies": {
     "@instathings/modbus-herdsman-converters": "2.0.7",
     "fast-deep-equal": "^3.1.1",
-    "git-last-commit": "^1.0.0",
+    "git-last-commit": "^1.0.1",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.15",
-    "mkdir-recursive": "^0.4.0",
-    "modbus-serial": "^7.8.1",
+    "lodash": "^4.17.21",
+    "modbus-serial": "^8.0.11",
     "moment": "^2.24.0",
     "mqtt": "^3.0.0",
+    "mkdir-recursive": "^0.4.0",
     "object-assign-deep": "^0.4.0",
     "rimraf": "^3.0.2",
     "semver": "^7.2.1",
-    "winston": "^3.2.1"
+    "winston": "^3.10.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "mocha": "^7.1.1",
-    "nodemon": "^2.0.3",
-    "sinon": "^9.0.2"
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "sinon": "^15.2.0"
   }
 }
