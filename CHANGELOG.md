@@ -11,11 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - bumped to `modbus-herdsman-converters` 2.0.7
-- bumped dependencies `sinon`
+- bumped dependencies `modbus-serial`, `lodash`, `git-last-commit`, `mkdir-recursive` `winston`
 - bumped dev dependencies `mocha`, `nodemon`,`eslint`, `sinon`
 
 ### Removed
-- compatibility with deprecated Node.js versions
+- compatibility with deprecated Node.js versions (v10.x,v12.x)
 
 ## [1.1.6] - 2023-01-12
 ### Changed
