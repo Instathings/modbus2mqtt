@@ -1,14 +1,14 @@
 {
   "name": "@instathings/modbus2mqtt",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "Modbus2MQTT bridge",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js index",
-    "test": "INTERVAL=1 ./node_modules/mocha/bin/mocha"
+    "test": "INTERVAL=1 ./node_modules/mocha/bin/_mocha"
   },
   "engines": {
-    "node": "^10 || ^12 || ^13 || ^18"
+    "node": "^18 || ^20"
   },
   "keywords": [],
   "author": "",
@@ -26,13 +26,13 @@
     "object-assign-deep": "^0.4.0",
     "rimraf": "^3.0.2",
     "semver": "^7.2.1",
-    "winston": "^3.2.1"
+    "winston": "^3.10.0"
   },
   "devDependencies": {
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "nodemon": "^3.0.1",
     "sinon": "^15.2.0"
   }
