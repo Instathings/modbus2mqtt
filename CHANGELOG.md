@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.6] - 2023-01-12
 ### Changed
-- modbus integration period to 30 seconds
+- Modbus integration period to 30 seconds
 
 ## [1.1.4] - 2022-05-12
 ### Changed
